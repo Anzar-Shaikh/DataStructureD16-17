@@ -43,9 +43,9 @@ public class Utility {
 //	    String primeNumbers = "";
 //	    if( (n >= 0) && (n <= 1000))
 //	    {
-//		    for (i = 1; i <= n; i++)         
-//      		    { 		  	  
-//			  int counter=0; 	  
+//		    for (i = 1; i <= n; i++)
+//      		    {
+//			  int counter=0;
 //			  for(num =i; num>=1; num--)
 //			  {
 //			     if(i%num==0)
@@ -57,8 +57,8 @@ public class Utility {
 //			  {
 //			     //Appended the Prime number to the String
 //			     //primeNumbers = primeNumbers + i + " ";
-//			  }	
-//       		    }	
+//			  }
+//       		    }
 //	       return primeNumbers[i]);
 //	    }
 		
@@ -122,15 +122,13 @@ public class Utility {
 	
 	public static void anagramPalindrome(String str1, String str2) {
 
-        //int n = str1.length();
+        int n = str1.length();
 
-//        for(int i = n - 1; i >= 0; i--)
-//
-//        {
-//
-//            str2 = str2 + str1.charAt(i);
-//
-//        }
+        for(int i = n - 1; i >= 0; i--) {
+
+            str2 = str2 + str1.charAt(i);
+
+        }
 		int len1, len2;
 		len1 = str1.length(); 
 		len2 = str2.length();
@@ -302,27 +300,27 @@ public class Utility {
 	 }
 	
 	 public static void find(int low,int up) {
-			if(low==up) {
-				System.out.println("Your number is : "+low);
-				System.out.println("Intermediary numbers is "+(low-1)+" and "+(low+1));
-				return;
-			}
-			//Finding middle value between range low and up
-			int mid=(low+up)/2;
-			int ch;
-			System.out.println("Press 1 : "+low+" - "+mid);
-			System.out.println("Press 2 : "+(mid+1)+" - "+up);
-			ch=inputInteger();
-			//Number is in first half
-			if(ch==1) {
-				find(low,mid);
-			}
-			//Number is in second half
-			else {
+		 if(low==up) {
+			 System.out.println("Your number is : "+low);
+			 System.out.println("Intermediary numbers is "+(low-1)+" and "+(low+1));
+			 return;
+		 }
+		 //Finding middle value between range low and up
+		 int mid=(low+up)/2;
+		 int ch;
+		 System.out.println("Press 1 : "+low+" - "+mid);
+		 System.out.println("Press 2 : "+(mid+1)+" - "+up);
+		 ch=inputInteger();
+		 //Number is in first half
+		 if(ch==1) {
+			 find(low,mid);
+		 }
+		 //Number is in second half
+		 else {
 
-				find(mid+1,up);
-			}
-	  }
+			 find(mid+1,up);
+		 }
+	 }
 	 
 	public static  int inputInteger(){
 		try{
